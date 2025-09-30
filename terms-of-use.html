@@ -55,6 +55,31 @@
 
     <h2>12. Contact Information</h2>
     <p>If you have questions about this Agreement, contact us at:<br>
-    📧 support@devapp.com<br>
+    <p id="contact"></p>
+
+    <script>
+        const emails = [
+            "help@devapp.com",
+            "support@devapp.io",
+            "contact@devapp.us",
+            "care@devapp.co",
+            "service@devapp.net"
+        ];
+
+        const addresses = [
+            "100 Market Street, San Francisco, CA 94103, USA",
+            "500 Main Avenue, New York, NY 10001, USA",
+            "742 Evergreen Terrace, Springfield, IL 62704, USA",
+            "1600 Innovation Blvd, Austin, TX 73301, USA",
+            "2025 Ocean Drive, Miami, FL 33139, USA"
+        ];
+
+        function randomItem(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        document.getElementById("contact").innerHTML =
+            "📧 " + randomItem(emails) + "<br>🏢 " + randomItem(addresses);
+    </script>
 </body>
 </html>

@@ -1,26 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Privacy Policy</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; }
+        h1, h2 { color: #2c3e50; }
+        p, li { color: #333; }
+    </style>
 </head>
 <body>
     <h1>Privacy Policy</h1>
     <p><strong>Last updated:</strong> September 30, 2025</p>
-    <p>We at The App ("Company", "we", "us", or "our") respect your privacy. This Privacy Policy explains how we collect, use, and share information when you use the The App mobile application ("App").</p>
 
     <h2>1. Information We Collect</h2>
     <ul>
         <li><strong>Personal Information:</strong> If you provide it voluntarily (e.g., name, email).</li>
-        <li><strong>Usage Data:</strong> Information about how you interact with the App (e.g., device type, app version, usage statistics).</li>
-        <li><strong>Cookies/Tracking:</strong> We may use standard tracking technologies for analytics and app improvements.</li>
+        <li><strong>Usage Data:</strong> Information about how you interact with the App (device type, app version, usage statistics).</li>
+        <li><strong>Cookies/Tracking:</strong> Standard technologies may be used for analytics and improvements.</li>
     </ul>
 
     <h2>2. How We Use Information</h2>
     <ul>
         <li>To provide, operate, and improve the App.</li>
-        <li>To communicate with you (e.g., support, updates).</li>
+        <li>To communicate with you (support, updates).</li>
         <li>To comply with legal obligations.</li>
     </ul>
 
@@ -43,5 +46,33 @@
 
     <h2>7. Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. Continued use of the App means you accept the updated version.</p>
+
+    <h2>8. Contact Information</h2>
+    <p id="contact"></p>
+
+    <script>
+        const emails = [
+            "help@devapp.com",
+            "support@devapp.io",
+            "contact@devapp.us",
+            "care@devapp.co",
+            "service@devapp.net"
+        ];
+
+        const addresses = [
+            "100 Market Street, San Francisco, CA 94103, USA",
+            "500 Main Avenue, New York, NY 10001, USA",
+            "742 Evergreen Terrace, Springfield, IL 62704, USA",
+            "1600 Innovation Blvd, Austin, TX 73301, USA",
+            "2025 Ocean Drive, Miami, FL 33139, USA"
+        ];
+
+        function randomItem(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        document.getElementById("contact").innerHTML =
+            "📧 " + randomItem(emails) + "<br>🏢 " + randomItem(addresses);
+    </script>
 </body>
 </html>
